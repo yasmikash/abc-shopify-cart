@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: cart-ctseapp-k8
-          image: nithyayamasinghe/abc-shopify-cart:latest
+          image: yasmikash/abc-shopify-cart:latest
           ports:
             - containerPort: 5000
           env:

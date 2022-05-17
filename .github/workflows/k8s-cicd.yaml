@@ -49,13 +49,4 @@ jobs:
           KUBECTL_VERSION: "v1.23.0"
 
         with:
-          args: get pods
-
-      - name: Kubectl Access
-        uses: kodermax/kubectl-aws-eks@master
-        env:
-          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG }}
-          KUBECTL_VERSION: "v1.23.0"
-
-        with:
           args: rollout restart deployment/${{ env.POD_DEPLOYMENT_NAME }}
