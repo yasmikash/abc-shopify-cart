@@ -29,5 +29,5 @@ module.exports.getUserCart = async (userId) => {
 
 module.exports.getAllCarts = async () => {
   const carts = await Cart.find();
-  return carts;
+  return [...carts, { all: true }];
 };
