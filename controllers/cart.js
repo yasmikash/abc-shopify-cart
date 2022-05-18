@@ -24,10 +24,10 @@ module.exports.deleteCart = async (id) => {
 
 module.exports.getUserCart = async (userId) => {
   const cart = await Cart.findOne({ userId: userId });
-  return cart;
+  return { cart, single: true };
 };
 
 module.exports.getAllCarts = async () => {
   const carts = await Cart.find();
-  return [...carts, { all: true }];
+  return carts;
 };
