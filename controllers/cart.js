@@ -24,7 +24,7 @@ module.exports.deleteCart = async (id) => {
 
 module.exports.getUserCart = async (userId) => {
   const cart = await Cart.findOne({ userId: userId });
-  return { cart, single: true };
+  return { cart };
 };
 
 module.exports.getAllCarts = async () => {
